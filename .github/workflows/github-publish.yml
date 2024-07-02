@@ -1,0 +1,22 @@
+name: Auto publish
+
+on:
+  schedule:
+  - cron: "0 6 * * *"
+
+env:
+  REPO_NAME: ${{ github.event.repository.name }}
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Go
+      uses: actions/setup-go@v4
+    - name: Build githubreleaser
+      run: go build -v -o ./githubreleaser ./cmd/githubreleaser
+    - name: Publish
+      run: ./githubreleaser -owner $GITHUB_REPOSITORY_OWNER -repo $REPO_NAME -token ${{ secrets.GITHUB_TOKEN }}
