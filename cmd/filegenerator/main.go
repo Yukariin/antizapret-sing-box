@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/L11R/antizapret-sing-geosite/geosite_antizapret"
+	"github.com/Yukariin/antizapret-sing-box/geosite_antizapret"
 )
 
 func main() {
