@@ -1,4 +1,4 @@
-module github.com/L11R/antizapret-sing-geosite
+module github.com/Yukariin/antizapret-sing-box
 
 go 1.20
 
