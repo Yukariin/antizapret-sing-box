@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/L11R/antizapret-sing-geosite/geosite_antizapret"
+	"github.com/Yukariin/antizapret-sing-box/geosite_antizapret"
 	"log"
 )
 
