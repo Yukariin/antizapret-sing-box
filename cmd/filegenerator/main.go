@@ -10,6 +10,6 @@ func main() {
 	generator := geosite_antizapret.NewGenerator()
 
 	if err := generator.GenerateAndWrite(); err != nil {
-		log.Fatal(err)
+		log.Fatalf("Failed to generate and write data: %v", err)
 	}
 }
